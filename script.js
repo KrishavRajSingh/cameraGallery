@@ -75,7 +75,11 @@ captureBtnCont.addEventListener('click',(e)=>{
     canvas.height = video.videoHeight;
     canvas.width = video.videoWidth;
     let tool = canvas.getContext("2d");
+    if(video.hasAttribute("filter"))
     tool.filter = video.style.filter;
+    else{
+        tool.filter = getComputedStyle(video).filter;
+    }   
     tool.drawImage(video,0,0,canvas.width,canvas.height);
     let imgURL = canvas.toDataURL();
     if(db){
