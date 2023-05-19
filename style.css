@@ -1,0 +1,202 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.video-cont{
+    height: 100vh;
+    width: 100vw;
+}
+video{
+    height: 100%;
+    width: 100%;
+    background: #000;
+    /* object-fit: cover; */
+    /* filter: blur(1px); */
+}
+.action-btn-cont{
+    height: 12rem;
+    width: 5rem;
+    /* background: blue; */
+    position: absolute;
+    right: 3rem;
+    top: calc((100vh - 15rem)/2);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.action-btn-cont>*{
+    width: 100%;
+    height: 5rem;
+    /* background-color: rgb(130, 57, 69); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0.25rem solid white;
+}
+.record-btn{
+    height: 3rem;
+    width: 3rem;
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.capture-btn{
+    height: 3rem;
+    width: 3rem;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.scale-record{
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+@keyframes scale-record{
+    25%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.1);
+    } 
+}
+.scale-capture{
+    animation-name: scale-capture;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+@keyframes scale-capture{
+    25%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    } 
+}
+.timer-cont{
+    /* background-color: yellow; */
+    width: 5rem;
+    height: 2rem;
+    position: absolute;
+    top: calc((100vh )/2 + 15rem);
+    left: calc((100vw - 7rem)/2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 0, 0);
+    font-family: monospace;
+    font-size: 1rem;
+}
+.filter-cont{
+    height: 100%;
+    width: 13rem;
+    /* background-color: black; */
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* font-size: 50px; */
+    cursor: pointer;
+}
+.filter-icon{
+    /* font-weight: 100; */
+    position: absolute;
+    top: calc((100vh - 2rem)/2);
+    left: 5rem;
+    font-size: 50px !important;
+    /* background-color: aqua; */
+    cursor: pointer;
+    color: white
+}
+.filter{
+    /* color: black; */
+    /* font-family: fantasy; */
+    height: 4rem;
+    width: 4rem;
+    background-image: url('https://imgs.search.brave.com/Xi_YX1vqrvCF9cXkRNP97FBfkELSKFd6e7CUyWj4-L0/rs:fit:1080:1200:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2I1L2Q3/LzA2L2I1ZDcwNjdl/Y2RkZWM2YjkzOGMy/ZDA3OTBjZjViNmI2/LmpwZw');
+    background-position: center;
+    background-size: 100% 100%;
+    margin: 0.5rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: rgb(247, 247, 247); */
+    /* text-align: center;  */
+}
+.none{
+    filter: none;
+}
+.blur{
+    filter: blur(2px);
+}
+.brightness{
+    filter: brightness(200%);
+}
+.contrast{
+    filter: contrast(200%);
+}
+.grayscale{
+    filter: grayscale(100%);
+}
+.hue-rotate{
+    filter: hue-rotate(45deg);
+}
+.invert{
+    filter: invert(100%);
+}
+.opacity{
+    filter: opacity(50%);
+}
+.saturate{
+    filter: saturate(3);
+}
+.sepia{
+    filter: sepia(100%);
+}
+/* input{
+    /* position: absolute; 
+    top: 90vh;
+    left: calc((100vw - 20rem)/2);
+    width: 20rem;
+    margin: 1rem;
+} */
+.gallery{
+    color: white;
+    /* color: rgb(216, 242, 242); */
+    position: absolute;
+    right: 4rem;
+    bottom: 7rem;
+    font-size: 3rem !important;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 426px) {
+    .filter-icon{
+        left: 1rem;
+    }
+    .filter-cont{
+        left: 0;
+        width: 10rem;
+    }
+    .filter{
+        height: 3rem;
+        width: 3rem;
+    }
+    .action-btn-cont{
+        right: 1rem;
+    }
+    .gallery{
+        right: 2rem;
+    }
+    
+}

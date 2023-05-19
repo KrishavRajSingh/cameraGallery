@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/wAAAAAcEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/wAAAAAAAAAAHBLt/xwS7f8cEu3/HBLt/xwS7f8AAAAAHBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/HBLtYAAAAAAAAAAAAAAAAAAAAAAcEu3/HBLt/xwS7f8cEu3/AAAAABwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/wAAAAAAAAD/AAAA/wAAAP8AAAD/AAAAABwS7f8cEu3/HBLt/wAAAAAcEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8AAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAcEu3/HBLt/xwS7f8AAAAAHBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/AAAAAAAAAP8AAAD/AAAA/wAAAP8AAAAAHBLt/xwS7f8cEu3/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/AAAAAAAAAAAAAAAAAAAAABwS7f8cEu3/HBLt/xwS7f8AAAAAHBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/AAAAAAAAAAAcEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/HBLt/xwS7f8cEu3/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANTU1Z8gHyP/AAAAACAfI/8gHyP/AAAAAAAAAAAgHyP/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAIAAAACAYAAAgfAAAIEIAACBCAAAgQgAAP+fAACA8AAAgAAAAMABAAD8mwAA//8AAP//AAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
+    <title>Camera</title>
+</head>
+<body>
+    <div class="video-cont">
+        <video autoplay src=""></video>
+    </div>
+    <div class="action-btn-cont">
+        <div class="record-btn-cont">
+            <div class="record-btn"></div>
+        </div>
+        <div class="capture-btn-cont">
+            <div class="capture-btn"></div>
+        </div>
+    </div>
+    <div class="timer-cont">
+        <div class="timer"></div>
+    </div>
+    
+    <span class="material-icons filter-icon">
+        photo_filter
+    </span>
+
+    <div class="filter-cont">
+        <div class="filter none"></div>
+        <div class="filter blur"></div>
+        <div class="filter brightness"></div>
+        <div class="filter contrast"></div>
+        <div class="filter grayscale"></div>
+        <div class="filter hue-rotate"></div>
+        <div class="filter invert"></div>
+        <div class="filter opacity"></div>
+        <div class="filter saturate"></div>
+        <div class="filter sepia"></div>
+    </div>
+    <span class="material-icons gallery">
+        photo_library
+    </span>
+
+    <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+    <script src="./db.js"></script>
+    <script src="./script.js"></script>
+    <script src="./filter.js"></script>
+    <script>
+        let gallery = document.querySelector('.gallery');
+        gallery.addEventListener('click',(e)=>{
+            location.assign('./gallery.html');
+        })
+    </script>
+</body>
+</html>
